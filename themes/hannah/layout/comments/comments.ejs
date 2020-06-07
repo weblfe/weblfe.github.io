@@ -1,0 +1,7 @@
+<% if (page.comments && !is_home()){ %>
+<div class="comments">
+    <%- partial('./disqus-comments') %>
+    <%- partial('./changyan-comments') %>
+    <%- partial('./gittalk-comments') %>
+</div>
+<% } %>

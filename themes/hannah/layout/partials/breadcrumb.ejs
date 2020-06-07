@@ -1,0 +1,54 @@
+<div class="bread-crumb">
+    <ul class="bread-crumb-menu animated rubberBand">
+        <li><a href="<%- url_for('/') %>"><i class="fh fh-ravelry" aria-hidden="true"></i> Home</a></li>
+        <% if(!is_home()){
+        if(is_category()){ %>
+        <li><a href="<%- url_for('/categories') %>"><i class="fh fh-cubes" aria-hidden="true"></i> Category</a></li>
+        <% } else if(is_tag()){ %>
+        <li><a href="<%- url_for('/tags') %>"><i class="fh fh-tags" aria-hidden="true"></i> Tags</a></li>
+        <% } else if(is_archive()){ %>
+        <li><a href="<%- url_for('/archives') %>"><i class="fh fh-archive" aria-hidden="true"></i> Archives</a></li>
+        <% }  else if(is_post()){
+        if (page.categories && page.categories.length)
+        page.categories.forEach(function (cate) {
+        %>
+        <li><a href="<%- url_for(cate.path) %>"><i class="fh fh-cube" aria-hidden="true"></i> <%- cate.name %></a>
+        </li>
+        <%
+        });
+        }
+            var lastInfo = page.title || page.tag || page.category;
+        if(lastInfo){ %>
+        <li>
+            <%
+            if((path || "").toLowerCase().indexOf("categories/".toLowerCase()) === 0){
+            %>
+            <i class="fh fh-cube" aria-hidden="true"></i>
+            <%
+            }else if((path || "").toLowerCase().indexOf("Tags/".toLowerCase()) === 0){
+            %>
+            <i class="fh fh-tag" aria-hidden="true"></i>
+            <%
+            }else if((path || "").toLowerCase().indexOf("About/".toLowerCase()) === 0){
+            %>
+            <i class="fh fh-about" aria-hidden="true"></i>
+            <%
+            }else if((path || "").toLowerCase().indexOf("archives/".toLowerCase()) === 0){
+            %>
+            <i class="fh fh-archive" aria-hidden="true"></i>
+            <%
+            }else{
+            %>
+            <i class="fh fh-newspaper-o" aria-hidden="true"></i>
+            <%
+            }
+            %>
+            <%- lastInfo %>
+        </li>
+        <% }
+        } %>
+    </ul>
+    <div class="bread-crumb-search">
+        <%- partial('search') %>
+    </div>
+</div>

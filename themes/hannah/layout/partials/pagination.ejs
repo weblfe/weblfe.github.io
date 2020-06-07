@@ -1,0 +1,34 @@
+<div class="animated bounceInDown paginations">
+    <div class="col-md-8 col-md-push-2 col-xs-12">
+        <nav>
+            <% if (page.prev_link) { %>
+            <a href="<%= url_for(page.prev_link) %>" class="prev col-md-2 col-xs-4 text-left">&larr; Prev</a>
+            <% } else if (page.prev) { %>
+            <a href="<%= url_for(page.prev.path) %>" class="prev col-md-2 col-xs-4 text-left">&larr; Prev</a>
+            <% } %>
+            <span
+                class="page-content col-md-8 <%= (!page.prev_link && !page.prev) ? "col-md-offset-2 col-xs-offset-4" : "" %> col-xs-4 text-center">
+                <% if (typeof page.current === 'number' && typeof page.total === 'number') { %>
+                Page <%= page.current %> of <%= page.total %>
+                <% } %>
+            </span>
+            <% if (page.next_link) { %>
+            <a href="<%= url_for(page.next_link) %>" class="next col-md-2 col-xs-4 text-right">Next &rarr;</a>
+            <% } else if (page.next && page.next.path) { %>
+            <a href="<%= url_for(page.next.path) %>" class="next col-md-2 col-xs-4 text-right">Next &rarr;</a>
+            <% } %>
+        </nav>
+        <div>
+            <div class="col-md-6 col-xs-6 text-left">
+                <% if (page.prev && page.prev.title) { %>
+                <%- page.prev.title %>
+                <% } %>
+            </div>
+            <div class="col-md-6 col-xs-6 text-right">
+                <% if (page.next && page.next.title) { %>
+                <%- page.next.title %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

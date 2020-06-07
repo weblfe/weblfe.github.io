@@ -1,0 +1,5 @@
+<% if(config.archive_generator && config.archive_generator.per_page === 0){ %>
+<%- partial('partials/archive/timeline') %>
+<% }else{ %>
+<%- partial('partials/archive/list') %>
+<% } %>

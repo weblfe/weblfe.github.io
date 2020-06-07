@@ -1,0 +1,94 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home:
+    url: /
+    icon: fh fh-ravelry
+  Category:
+    url: /categories
+    icon: fh fh-cubes
+  Tag:
+    url: /tags
+    icon: fh fh-tags
+  Archives:
+    url: /archives
+    icon: fh fh-archive
+  About:
+    url: /about
+    icon: fh fh-about
+  Doc:
+    url: /doc
+    icon: fh fh-document
+  Plug:
+    url: /plug
+    icon: fh fh-plug
+  SiteMap:
+    url: /sitemap
+    icon: fh fh-sitemap
+
+
+# RSS
+rss: /atom.xml
+
+# Social
+social:
+  github:
+    url: https://github.com/objectyan
+    icon: fh fh-github
+    title: GitHub
+
+# headImg url and gravatar
+headImg:
+  url: /img/logo.jpg
+  gravatar:
+    email:
+    option:
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/hannah.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/hannah.js
+
+# post search
+search:
+  path: search.xml
+  field: post
+
+# site map
+sitemap:
+  path: sitemap.xml
+  template: ./sitemap_template.xml
+
+# Baidu Analytics
+baidu_analytics: 8fb2a05be303b36faebf141d7317de43
+# Google Analytics
+google_analytics:
+
+# Disqus Comments
+disqus_shortname:
+# Changyan Comments
+changyan_comments:
+  appid:
+  appsecret:
+# Gittalk Comments
+gittalk_comments:
+  clientID: e82b50d554e32a851ae7
+  clientSecret: 95923aeaddb44e6de22d088703c6bbde978f505c
+  repo: objectyan.github.io
+  owner: objectyan
+  admin: objectyan
+
+# auto nofollow
+nofollow:
+  enable: true
+  exclude:
+    - objectyan.me
