@@ -99,6 +99,6 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/weblfe/weblfe.github.io
+  repo: git@Gitlfe:weblfe/weblfe.github.io.git
   # example, https://github.com/hexojs/hexojs.github.io
   branch: gh-pages
