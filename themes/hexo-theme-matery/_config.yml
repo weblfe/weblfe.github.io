@@ -218,16 +218,6 @@ myProjects:
       iconBackground: "linear-gradient(to bottom right, #66BB6A 0%, #81C784 100%)"
       url: http://github.com/blinkfox/hexo-theme-matery
       desc: This is a Hexo blog theme with 'Material Design' and responsive design.
-    Fenix:
-      icon: fas fa-database
-      iconBackground: "linear-gradient(to bottom right, #F06292 0%, #EF5350 100%)"
-      url: https://github.com/blinkfox/fenix
-      desc: 这是 Spring Data JPA 复杂或动态 SQL 查询的扩展库。
-    typora-vue-theme:
-      icon: fas fa-file-alt
-      iconBackground: "linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)"
-      url: https://github.com/blinkfox/typora-vue-theme
-      desc: This is a typora theme inspired by Vue document style.
 
 # config my skills informations in about page.
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
@@ -235,8 +225,11 @@ myProjects:
 mySkills:
   enable: true
   data:
-    Java:
+    PHP:
       background: "linear-gradient(to right, #FF0066 0%, #FF00CC 100%)"
+      percent: 95%
+    Go:
+      background: "linear-gradient(to right, #9900FF 0%, #CC66FF 100%)"
       percent: 85%
     JavaScript:
       background: "linear-gradient(to right, #9900FF 0%, #CC66FF 100%)"
@@ -246,11 +239,11 @@ mySkills:
       percent: 80%
     CSS:
       background: "linear-gradient(to right, #00BCD4 0%, #80DEEA 100%)"
-      percent: 70%
+      percent: 50%
     SQL:
       background: "linear-gradient(to right, #4CAF50 0%, #81C784 100%)"
-      percent: 90%
-    程序设计:
+      percent: 80%
+    docker:
       background: "linear-gradient(to right, #FFEB3B 0%, #FFF176 100%)"
       percent: 75%
 
