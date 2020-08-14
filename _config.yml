@@ -101,6 +101,7 @@ deploy:
   type: git
   repo: git@Gitlfe:weblfe/weblfe.github.io.git
   # example, https://github.com/hexojs/hexojs.github.io
+  # branch: gh-pages
   branch: master
 # search plugin
 search:
