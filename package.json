@@ -6,7 +6,8 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "images": "node ./tools/zip.js"
   },
   "hexo": {
     "version": "4.2.1"
@@ -27,5 +28,9 @@
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
     "hexo-wordcount": "^6.0.1"
+  },
+  "devDependencies": {
+    "commander": "^6.0.0",
+    "images": "^3.2.3"
   }
 }
